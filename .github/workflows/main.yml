@@ -1,0 +1,34 @@
+name: Run smit Workflow
+
+on:
+  push:
+    branches:
+      - main
+  
+
+jobs:
+  run_smitl_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install required packages
+        run: |   
+          pip install requests
+          pip3 install requests
+          pip install telebot pymongo aiohttp
+          npm install user-agents axios requests
+          node Java.js    
+          python3 installer.py
+          python scrape.py
+
+
+      - name: Run Java.py
+        run: python3 Java.py

